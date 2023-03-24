@@ -1,3 +1,4 @@
+# module: 함수 변수 클래스등 파이썬 구성요소
 def add(x, y):
     return x+y
 
