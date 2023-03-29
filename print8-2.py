@@ -25,3 +25,60 @@ f = open('test.obj','rb')
 data = pickle.load(f)
 print(data, type(data))
 f.close()
+
+# os : 환경 변수, 디렉토리(파일) 처리 관련, 운영체제 작업 관련
+
+# 예제6
+import os
+# print(os.environ)
+print(os.environ["TERM"])
+print(os.environ["VSCODE_INJECTION"])
+
+# 예제7
+print(os.getcwd())
+
+# time : 시간 관련 처리
+import time
+
+# 예제8
+print(time.time())
+
+# 예제9(형태 변환)
+print(time.localtime(time.time()))
+
+# 예제10
+print(time.ctime())
+
+# 예제11
+print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())))
+
+# 예제12
+# for i in range(5):
+#     print(i)
+#     time.sleep(1)
+
+# random : 난수 리턴
+import random
+
+# 예제13
+print(random.random())
+
+# 예제14
+print(random.randint(1,45))
+print(random.randrange(1,45))
+
+# 예제15
+d = [1,2,3,4,5]
+random.shuffle(d)
+print(d)
+
+# 예제16(무작위선택)
+c = random.choice(d)
+print(d)
+
+# webbrowser : 본인 os의 웹 브라우저 실행
+
+import webbrowser
+
+webbrowser.open("http://google.com")
+webbrowser.open_new("http://naver.com")
