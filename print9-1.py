@@ -61,3 +61,27 @@ with open('./.ipynb_checkpoints/it_news.txt', 'r', encoding='UTF-8') as f:
         print(c, end='')
 
 print()
+
+# 파일 쓰기(write)
+
+# 예제1
+
+with open('./.ipynb_checkpoints/mnm.txt', 'w') as f:
+    f.write('I love python\n')
+
+# 예제2
+
+with open('./.ipynb_checkpoints/mnm.txt', 'a') as f:
+    f.write('I love python2\n')
+
+# 예제3
+# writelines : 리스트 -> 파일
+with open('./.ipynb_checkpoints/you.txt', 'w') as f:
+    list = ['Orange\n','Apple\n','Banana\n','Melon\n']
+    f.writelines(list)
+
+# 예제4
+with open('./.ipynb_checkpoints/text.txt', 'w') as f:
+    print('Test Text Write!', file=f)
+    print('Test Text Write!', file=f)
+    print('Test Text Write!', file=f)
