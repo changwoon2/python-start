@@ -19,3 +19,45 @@ cts = f.read()
 print(cts)
 # 반디스 close
 f.close()
+
+# 예제2
+with open('./.ipynb_checkpoints/it_news.txt', 'r', encoding='UTF-8') as f:
+    c = f.read()
+    print(c)
+    print(iter(c))
+    print(iter(c))
+print()
+
+# 예제3
+# redd() : 전체 읽기, read(10) : 100Byte
+
+with open('./.ipynb_checkpoints/it_news.txt', 'r', encoding='UTF-8') as f:
+    c = f.read(20)
+    print(c)
+    c = f.read(20)
+    print(c)
+    c = f.read(20)
+    f.seek(0,0)
+    c = f.read(20)
+    print(c)
+
+print()
+
+# 예제4
+with open('./.ipynb_checkpoints/it_news.txt', 'r', encoding='UTF-8') as f:
+    line = f.readline()
+    print(line)
+    line = f.readline()
+    print(line)
+
+print()
+
+# 예제5
+with open('./.ipynb_checkpoints/it_news.txt', 'r', encoding='UTF-8') as f:
+    cts = f.readlines()
+    print(cts)
+    print()
+    for c in cts:
+        print(c, end='')
+
+print()
